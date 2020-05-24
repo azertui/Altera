@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://menu.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 1
+theme = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="singleplayer" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 250.0
+margin_right = 612.0
+margin_bottom = 300.0
+text = "Singleplayer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="multiplayer" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 325.0
+margin_right = 612.0
+margin_bottom = 375.0
+disabled = true
+text = "Multiplayer"
+
+[node name="options" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 400.0
+margin_right = 612.0
+margin_bottom = 450.0
+text = "Options"
+[connection signal="pressed" from="singleplayer" to="." method="_on_singleplayer_pressed"]

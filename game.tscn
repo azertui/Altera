@@ -1,213 +1,213 @@
 [gd_scene load_steps=50 format=2]
 
-[ext_resource path="res://assets/tilesets.tres" type="TileSet" id=1]
-[ext_resource path="res://scripts/Scene.gd" type="Script" id=2]
-[ext_resource path="res://assets/mar_bow.png" type="Texture" id=3]
-[ext_resource path="res://scripts/KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://assets/mar_bow.png" type="Texture" id=1]
+[ext_resource path="res://assets/tilesets.tres" type="TileSet" id=2]
+[ext_resource path="res://scripts/KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Scene.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.47827, 1.27203 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 64, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 64, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 128, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 128, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 192, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 192, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 256, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 256, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 320, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 320, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 384, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 384, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 448, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 448, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 512, 640, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 512, 512, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 64, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 64, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 128, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 128, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 192, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 192, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 256, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 256, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 320, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 320, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 384, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 384, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 448, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 448, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 512, 512, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 512, 576, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 64, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 64, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 128, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 128, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 192, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 192, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 256, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 256, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 320, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 320, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 384, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 384, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 448, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 448, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 512, 576, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 512, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 64, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 64, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 128, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 128, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 192, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 192, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 256, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 256, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 320, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 320, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 384, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 384, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 448, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 448, 640, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 512, 704, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 512, 640, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=38]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
-"name": "walk_down",
+"name": "walk_up",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "walk_left",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
 "loop": true,
-"name": "walk_left",
+"name": "walk_right",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "walk_down",
 "speed": 6.0
 } ]
 
@@ -233,17 +233,17 @@ extents = Vector2( 29.4644, 6.60806 )
 extents = Vector2( 21.5282, 5.81595 )
 
 [node name="Scene" type="Node2D"]
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 
 [node name="Terrain" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 24, 21, 327680, 25, 21, 262145, 26, 21, 262145, 27, 21, 262145, 28, 21, 262145, 29, 21, 262145, 30, 21, 262145, 31, 21, 262145, 32, 21, 196615, 33, 21, 262145, 34, 21, 262145, 35, 21, 262145, 36, 21, 262145, 37, 21, 327681, 65560, 21, 262144, 65561, 2, 327680, 65562, 2, 262145, 65563, 2, 262145, 65564, 2, 262145, 65565, 2, 262145, 65566, 2, 262145, 65567, 2, 327681, 65568, 21, 131078, 65569, 2, 327684, 65570, 2, 196613, 65571, 2, 131075, 65572, 2, 262149, 65573, 21, 131078, 131093, 21, 327680, 131094, 21, 262145, 131095, 21, 262145, 131096, 21, 262146, 131097, 2, 262144, 131098, 21, 262148, 131099, 21, 393222, 131100, 21, 393222, 131101, 21, 393222, 131102, 21, 262149, 131103, 2, 262144, 131104, 21, 0, 131105, 21, 262149, 131106, 2, 262147, 131107, 2, 131073, 131108, 2, 0, 131109, 21, 131078, 196629, 21, 131078, 196630, 2, 262148, 196631, 2, 196614, 196632, 2, 262145, 196633, 2, 131078, 196634, 21, 393223, 196635, 21, 393221, 196636, 21, 393221, 196637, 21, 393221, 196638, 21, 131072, 196639, 2, 262144, 196640, 21, 262147, 196641, 21, 65537, 196642, 21, 393222, 196643, 21, 262149, 196644, 2, 327683, 196645, 21, 131078, 262165, 21, 131078, 262166, 2, 262147, 262167, 2, 262146, 262168, 21, 327685, 262169, 2, 327683, 262170, 21, 393223, 262171, 21, 393220, 262172, 21, 0, 262173, 21, 0, 262174, 21, 458758, 262175, 2, 262151, 262176, 2, 327681, 262177, 21, 262147, 262178, 21, 393216, 262179, 21, 65539, 262180, 21, 262145, 262181, 21, 131076, 327701, 21, 262151, 327702, 21, 196613, 327703, 21, 131075, 327704, 21, 65538, 327705, 21, 393222, 327706, 21, 4, 327707, 21, 393220, 327708, 21, 0, 327709, 21, 393221, 327710, 21, 3, 327711, 21, 262149, 327712, 2, 262151, 327713, 2, 262145, 327714, 2, 327681, 327715, 21, 327683, 327716, 2, 327685, 327717, 21, 262144, 393237, 4, 0, 393238, 21, 393223, 393239, 21, 393220, 393240, 21, 0, 393241, 21, 393220, 393242, 21, 393220, 393243, 21, 393220, 393244, 21, 393221, 393245, 21, 1, 393246, 21, 458756, 393247, 21, 196608, 393248, 21, 196613, 393249, 21, 262149, 393250, 2, 262151, 393251, 2, 196613, 393252, 2, 131077, 393253, 21, 262144, 458774, 21, 262147, 458775, 21, 131073, 458776, 21, 393219, 458777, 21, 458756, 458778, 21, 2, 458779, 21, 393221, 458780, 21, 1, 458781, 21, 262150, 458782, 5, 0, 458783, 6, 0, 458784, 21, 262147, 458785, 21, 65537, 458786, 21, 262149, 458787, 2, 262147, 458788, 2, 262146, 458789, 21, 262144, 524310, 4, 0, 524311, 5, 0, 524312, 6, 0, 524313, 6, 0, 524314, 21, 262147, 524315, 21, 5, 524316, 21, 262150, 524317, 8, 0, 524320, 4, 0, 524321, 21, 262147, 524322, 21, 196608, 524323, 21, 262145, 524324, 21, 262145, 524325, 21, 262146, 524334, 10, 262151, 589850, 4, 0, 589851, 21, 262144, 589852, 8, 0, 589857, 4, 0, 589858, 5, 0, 589859, 6, 0, 589860, 7, 0, 589861, 8, 0, 589870, 9, 0, 655381, 10, 0, 655382, 10, 5, 655387, 21, 327683, 720917, 10, 65536, 720918, 10, 131073, 720923, 9, 0, 786453, 10, 131072, 786454, 10, 196609, 786455, 10, 5, 851988, 10, 0, 851989, 10, 196611, 851990, 10, 196612, 851991, 10, 196609, 851992, 10, 1, 851993, 10, 5, 851995, 10, 7, 851996, 10, 8, 851997, 10, 8, 851998, 10, 131080, 851999, 10, 8, 852000, 10, 131080, 852001, 10, 8, 852002, 10, 131080, 852003, 10, 131080, 852004, 10, 131080, 852005, 10, 9, 852007, 10, 0, 852008, 10, 2, 852009, 10, 196610, 852010, 10, 3, 852011, 10, 5, 917523, 10, 0, 917524, 10, 196611, 917525, 10, 65537, 917526, 10, 262147, 917527, 10, 262148, 917528, 10, 65539, 917529, 10, 65547, 917530, 10, 131080, 917531, 10, 262155, 917532, 2, 327680, 917533, 2, 262145, 917534, 2, 262145, 917535, 2, 262145, 917536, 2, 262145, 917537, 2, 262145, 917538, 2, 262145, 917539, 2, 196613, 917540, 2, 262149, 917541, 10, 65543, 917543, 10, 131075, 917544, 10, 65537, 917545, 10, 262147, 917546, 10, 65539, 917547, 10, 196613, 983057, 10, 0, 983058, 10, 4, 983059, 10, 196611, 983060, 10, 196612, 983061, 10, 196613, 983062, 2, 327680, 983063, 2, 327682, 983064, 10, 196608, 983065, 10, 196613, 983066, 5, 0, 983067, 10, 65545, 983068, 2, 327683, 983069, 10, 0, 983070, 10, 1, 983071, 10, 2, 983072, 10, 3, 983073, 10, 2, 983074, 10, 5, 983075, 2, 131074, 983076, 2, 131072, 983077, 10, 65545, 983079, 10, 65536, 983080, 10, 131077, 983081, 2, 327685, 983082, 10, 131072, 983083, 10, 196609, 983084, 10, 4, 983085, 10, 5, 1048593, 10, 262144, 1048594, 10, 65539, 1048595, 10, 131076, 1048596, 10, 65537, 1048597, 10, 262149, 1048598, 2, 262144, 1048599, 10, 0, 1048600, 10, 196611, 1048601, 10, 131073, 1048603, 10, 327690, 1048604, 10, 131080, 1048605, 10, 12, 1048606, 10, 131076, 1048607, 10, 65540, 1048608, 10, 131076, 1048609, 10, 65540, 1048610, 10, 131077, 1048611, 2, 262147, 1048612, 2, 262146, 1048613, 10, 327690, 1048614, 10, 131080, 1048615, 10, 12, 1048616, 10, 131073, 1048617, 2, 262144, 1048618, 10, 262144, 1048619, 10, 65538, 1048620, 10, 65539, 1048621, 10, 65541, 1114129, 4, 0, 1114130, 10, 131072, 1114131, 10, 65540, 1114132, 10, 131077, 1114133, 2, 327684, 1114134, 2, 262150, 1114135, 10, 65536, 1114136, 10, 65540, 1114137, 10, 196613, 1114139, 10, 65543, 1114140, 2, 327685, 1114141, 10, 196608, 1114142, 10, 65537, 1114143, 10, 262147, 1114144, 10, 65539, 1114145, 10, 65540, 1114146, 10, 65547, 1114147, 10, 131080, 1114148, 10, 131080, 1114149, 10, 131081, 1114150, 6, 0, 1114151, 10, 65536, 1114152, 10, 131073, 1114153, 2, 196610, 1114154, 2, 131075, 1114155, 2, 262149, 1114156, 10, 131075, 1114157, 10, 65541, 1179666, 10, 65536, 1179667, 10, 131076, 1179668, 10, 196609, 1179669, 10, 3, 1179670, 10, 196610, 1179671, 10, 196611, 1179672, 10, 65537, 1179673, 10, 262149, 1179675, 10, 65545, 1179676, 2, 327683, 1179677, 10, 65536, 1179678, 10, 196613, 1179679, 2, 327685, 1179680, 10, 65536, 1179681, 10, 65540, 1179682, 10, 131077, 1179683, 5, 0, 1179684, 6, 0, 1179685, 8, 0, 1179687, 10, 131075, 1179688, 10, 131077, 1179689, 2, 262147, 1179690, 2, 131073, 1179691, 2, 0, 1179692, 10, 131072, 1179693, 10, 131073, 1245202, 10, 262144, 1245203, 10, 65539, 1245204, 10, 196612, 1245205, 10, 65540, 1245206, 10, 196612, 1245207, 10, 196612, 1245208, 10, 65541, 1245209, 8, 0, 1245211, 10, 131079, 1245212, 10, 131080, 1245213, 10, 12, 1245214, 10, 196613, 1245215, 2, 262144, 1245216, 10, 131072, 1245217, 10, 65540, 1245218, 10, 196613, 1245222, 10, 0, 1245223, 10, 196611, 1245224, 10, 196609, 1245225, 10, 3, 1245226, 10, 5, 1245227, 2, 262144, 1245228, 10, 131072, 1245229, 10, 65541, 1310738, 4, 0, 1310739, 10, 196608, 1310740, 10, 65540, 1310741, 10, 65540, 1310742, 10, 131076, 1310743, 10, 65540, 1310744, 10, 196613, 1310747, 4, 0, 1310748, 5, 0, 1310749, 10, 131075, 1310750, 10, 65541, 1310751, 2, 327683, 1310752, 10, 65536, 1310753, 10, 65540, 1310754, 10, 131073, 1310758, 10, 196608, 1310759, 10, 65537, 1310760, 10, 262146, 1310761, 10, 11, 1310762, 10, 262149, 1310763, 2, 262144, 1310764, 10, 131075, 1310765, 10, 131077, 1376275, 10, 262144, 1376276, 10, 262147, 1376277, 10, 65539, 1376278, 10, 131076, 1376279, 10, 65540, 1376280, 10, 196613, 1376285, 10, 65536, 1376286, 10, 196609, 1376287, 10, 4, 1376288, 10, 196611, 1376289, 10, 65540, 1376290, 10, 65547, 1376291, 10, 327692, 1376293, 10, 0, 1376294, 10, 196611, 1376295, 10, 65541, 1376296, 2, 327685, 1376297, 10, 65545, 1376298, 2, 327680, 1376299, 2, 262150, 1376300, 10, 131075, 1376301, 10, 196613, 1441810, 10, 262151, 1441811, 4, 0, 1441812, 5, 0, 1441813, 10, 262144, 1441814, 10, 65539, 1441815, 10, 65537, 1441816, 10, 262149, 1441821, 10, 262144, 1441822, 10, 262147, 1441823, 10, 262147, 1441824, 10, 262145, 1441825, 10, 262145, 1441826, 10, 262149, 1441827, 8, 0, 1441828, 10, 0, 1441829, 10, 196611, 1441830, 10, 65540, 1441831, 10, 196613, 1441832, 2, 262144, 1441833, 10, 393226, 1441834, 2, 262144, 1441835, 10, 0, 1441836, 10, 196611, 1441837, 10, 131073, 1507346, 9, 0, 1507349, 4, 0, 1507350, 10, 262144, 1507351, 10, 262149, 1507352, 8, 0, 1507357, 4, 0, 1507358, 5, 0, 1507359, 6, 0, 1507360, 5, 0, 1507361, 6, 0, 1507362, 8, 0, 1507364, 10, 131075, 1507365, 10, 196612, 1507366, 10, 196612, 1507367, 10, 196613, 1507368, 2, 262151, 1507369, 2, 262145, 1507370, 2, 262150, 1507371, 10, 196608, 1507372, 10, 65537, 1507373, 10, 262149, 1572886, 4, 0, 1572887, 8, 0, 1572900, 10, 262144, 1572901, 10, 262145, 1572902, 10, 65539, 1572903, 10, 196609, 1572904, 10, 196610, 1572905, 10, 196610, 1572906, 10, 2, 1572907, 10, 196611, 1572908, 10, 65541, 1572909, 8, 0, 1638436, 4, 0, 1638437, 5, 0, 1638438, 10, 262144, 1638439, 10, 262147, 1638440, 10, 65538, 1638441, 10, 262148, 1638442, 10, 262148, 1638443, 10, 262148, 1638444, 10, 262149, 1703974, 4, 0, 1703975, 5, 0, 1703976, 6, 0, 1703977, 5, 0, 1703978, 6, 0, 1703979, 5, 0, 1703980, 8, 0 )
 
 [node name="Transparent" type="TileMap" parent="Terrain"]
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 collision_layer = 3
@@ -255,7 +255,7 @@ __meta__ = {
 }
 
 [node name="Objects" type="TileMap" parent="Terrain/Transparent"]
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 cell_y_sort = true
@@ -272,7 +272,7 @@ __meta__ = {
 position = Vector2( 536.084, 294.214 )
 collision_layer = 7
 collision_mask = 7
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Transparent/Objects/KinematicBody2D"]
 position = Vector2( 0.00872767, 11.2537 )
