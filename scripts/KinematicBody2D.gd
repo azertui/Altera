@@ -6,6 +6,7 @@ extends KinematicBody2D
 # var b: String = "text"
 onready var animation = get_node("AnimatedSprite")
 var speed = 20
+var bow_shooting = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,13 +16,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
-	var direction: Vector2
+	var direction = Vector2.ZERO
 	var left = Input.is_action_pressed("ui_left")
 	var right = Input.is_action_pressed("ui_right")
 	var up = Input.is_action_pressed("ui_up")
 	var down = Input.is_action_pressed("ui_down")
 	
-	if !down && !up && !left && !right:
+	if !down && !up && !left && !right && !bow_shooting:
 		animation.stop()
 		animation.set_frame(0)
 	else:
@@ -35,7 +36,7 @@ func _process(delta: float):
 			animation.play("walk_up")
 			direction.y=-speed*delta
 		elif down:
-			animation.play("walk_down")		
+			animation.play("walk_down")	
 			direction.y=speed*delta
 		else:
 			var anim = animation.get_animation()
@@ -62,7 +63,40 @@ func _process(delta: float):
 			animation.set_speed_scale(2)
 		else:
 			animation.set_speed_scale(1)
-		move_and_collide(direction)
+	if Input.is_action_pressed("ui_select"):
+		bow_shooting = true
+		direction = Vector2.ZERO
+		var anim = animation.get_animation()
+		if anim == "walk_right":
+			animation.play("bow_shoot_right")
+		elif anim == "walk_left":
+			animation.play("bow_shoot_left")
+		elif anim == "walk_down":
+			animation.play("bow_shoot_down")
+		elif anim == "walk_up":
+			animation.play("bow_shoot_up")
+		elif anim == "bow_release_right":
+			animation.play("bow_reshoot_right")
+		elif anim == "bow_release_left":
+			animation.play("bow_reshoot_left")
+		elif anim == "bow_release_up":
+			animation.play("bow_reshoot_up")
+		elif anim == "bow_release_down":
+			animation.play("bow_reshoot_down")
+	elif Input.is_action_just_released("ui_select"):
+		var anim = animation.get_animation()
+		if anim == "bow_shoot_right" || anim == "bow_reshoot_right":
+			animation.play("bow_release_right")
+		elif anim == "bow_shoot_left" || anim == "bow_reshoot_left":
+			animation.play("bow_release_left")
+		elif anim == "bow_shoot_down" || anim == "bow_reshoot_down":
+			animation.play("bow_release_down")
+		elif anim == "bow_shoot_up" || anim == "bow_reshoot_up":
+			animation.play("bow_release_up")
+		bow_shooting=false
+			
+# warning-ignore:return_value_discarded
+	move_and_collide(direction)
 	
 
 
