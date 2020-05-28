@@ -11,7 +11,10 @@ func _ready() -> void:
 	var screen_size = OS.get_screen_size()
 	var window_size = OS.get_window_size()
 	OS.set_window_position(screen_size*0.5 - window_size*0.5)
-	#OS.set_window_resizable(false)
+	#covers multi screens
+	screen_size = OS.get_screen_size()
+	window_size = OS.get_window_size()
+	OS.set_window_position(screen_size*0.5 - window_size*0.5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

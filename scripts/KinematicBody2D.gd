@@ -4,13 +4,13 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
+var arrow = preload("res://objects/arrow.tscn")
 onready var animation = get_node("AnimatedSprite")
 var speed = 20
 var bow_shooting = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_safe_margin(0.001)
 	pass # Replace with function body.
 
 
@@ -87,12 +87,32 @@ func _process(delta: float):
 		var anim = animation.get_animation()
 		if anim == "bow_shoot_right" || anim == "bow_reshoot_right":
 			animation.play("bow_release_right")
+			var arr = arrow.instance()
+			arr.init("right")
+			arr.set_name(str(arr.get_instance_id()))
+			get_parent().add_child(arr)
+			arr.set_position(get_position())
 		elif anim == "bow_shoot_left" || anim == "bow_reshoot_left":
 			animation.play("bow_release_left")
+			var arr = arrow.instance()
+			arr.init("left")
+			arr.set_name(str(arr.get_instance_id()))
+			get_parent().add_child(arr)
+			arr.set_position(get_position())
 		elif anim == "bow_shoot_down" || anim == "bow_reshoot_down":
 			animation.play("bow_release_down")
+			var arr = arrow.instance()
+			arr.init("down")
+			arr.set_name(str(arr.get_instance_id()))
+			get_parent().add_child(arr)
+			arr.set_position(get_position())
 		elif anim == "bow_shoot_up" || anim == "bow_reshoot_up":
 			animation.play("bow_release_up")
+			var arr = arrow.instance()
+			arr.init("up")
+			arr.set_name(str(arr.get_instance_id()))
+			get_parent().add_child(arr)
+			arr.set_position(get_position())
 		bow_shooting=false
 			
 # warning-ignore:return_value_discarded
