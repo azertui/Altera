@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/multiplayer.gd" type="Script" id=1]
+
+[node name="root" type="Node"]
+
+[node name="multiplayer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="multiplayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -88.0
+color = Color( 0.160784, 0.14902, 0.203922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="multiplayer/ColorRect"]
+margin_right = 1024.0
+margin_bottom = 512.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="refresh" type="Button" parent="multiplayer/ColorRect"]
+margin_left = 928.0
+margin_top = 488.0
+margin_right = 1024.0
+margin_bottom = 508.0
+text = "REFRESH LIST"
+flat = true
+
+[node name="ColorRect2" type="ColorRect" parent="multiplayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -88.0
+color = Color( 0.129412, 0.121569, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="multiplayer/ColorRect2"]
+margin_left = 48.0
+margin_top = 24.0
+margin_right = 216.0
+margin_bottom = 64.0
+text = "RETURN TO MENU"
+
+[node name="Button2" type="Button" parent="multiplayer/ColorRect2"]
+margin_left = 428.0
+margin_top = 24.0
+margin_right = 596.0
+margin_bottom = 64.0
+text = "JOIN SERVER"
+
+[node name="Button3" type="Button" parent="multiplayer/ColorRect2"]
+margin_left = 808.0
+margin_top = 24.0
+margin_right = 976.0
+margin_bottom = 64.0
+text = "HOST SERVER"
+
+[node name="network" type="Node" parent="."]
+[connection signal="button_up" from="multiplayer/ColorRect/refresh" to="multiplayer" method="_on_refresh_button_up"]
+[connection signal="button_up" from="multiplayer/ColorRect2/Button" to="multiplayer" method="_on_Button_button_up"]
+[connection signal="button_up" from="multiplayer/ColorRect2/Button2" to="multiplayer" method="_on_Button2_button_up"]

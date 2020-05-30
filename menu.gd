@@ -24,3 +24,7 @@ func _ready() -> void:
 
 func _on_singleplayer_pressed():
 	get_tree().change_scene("res://game.tscn")
+
+
+func _on_multiplayer_button_up() -> void:
+	get_tree().change_scene("res://multiplayer.tscn")
