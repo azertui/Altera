@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/multiplayer.gd" type="Script" id=1]
+[ext_resource path="res://scripts/multiplayer_root.gd" type="Script" id=2]
+[ext_resource path="res://scripts/PopupConnectionError.gd" type="Script" id=3]
 
 [node name="root" type="Node"]
+script = ExtResource( 2 )
 
 [node name="multiplayer" type="Control" parent="."]
 anchor_right = 1.0
@@ -67,7 +70,115 @@ margin_right = 976.0
 margin_bottom = 64.0
 text = "HOST SERVER"
 
-[node name="network" type="Node" parent="."]
+[node name="PopupDialog" type="PopupDialog" parent="multiplayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -8.0
+margin_right = 74.0
+margin_bottom = 52.0
+popup_exclusive = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="multiplayer/PopupDialog"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Error: connection failed"
+
+[node name="Label2" type="Label" parent="multiplayer/PopupDialog"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 146.0
+margin_bottom = 34.0
+text = "Reloading server list"
+
+[node name="ToolButton" type="ToolButton" parent="multiplayer/PopupDialog"]
+margin_left = 50.0
+margin_top = 36.0
+margin_right = 96.0
+margin_bottom = 58.0
+text = "close"
+
+[node name="PopupDialog2" type="PopupDialog" parent="multiplayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -8.0
+margin_right = 74.0
+margin_bottom = 52.0
+popup_exclusive = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="multiplayer/PopupDialog2"]
+margin_left = 58.0
+margin_top = 4.0
+margin_right = 88.0
+margin_bottom = 18.0
+text = "Error"
+
+[node name="Label2" type="Label" parent="multiplayer/PopupDialog2"]
+margin_left = 3.54968
+margin_top = 20.0
+margin_right = 143.55
+margin_bottom = 34.0
+text = "Please select a server"
+
+[node name="ToolButton" type="ToolButton" parent="multiplayer/PopupDialog2"]
+margin_left = 50.0
+margin_top = 36.0
+margin_right = 96.0
+margin_bottom = 58.0
+text = "close"
+
+[node name="PopupDialog3" type="PopupDialog" parent="multiplayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -8.0
+margin_right = 74.0
+margin_bottom = 52.0
+popup_exclusive = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="multiplayer/PopupDialog3"]
+margin_left = 58.0
+margin_top = 4.0
+margin_right = 88.0
+margin_bottom = 18.0
+text = "Error"
+
+[node name="Label2" type="Label" parent="multiplayer/PopupDialog3"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 150.0
+margin_bottom = 34.0
+text = "Failed to create host"
+
+[node name="ToolButton" type="ToolButton" parent="multiplayer/PopupDialog3"]
+margin_left = 50.0
+margin_top = 36.0
+margin_right = 96.0
+margin_bottom = 58.0
+text = "close"
 [connection signal="button_up" from="multiplayer/ColorRect/refresh" to="multiplayer" method="_on_refresh_button_up"]
 [connection signal="button_up" from="multiplayer/ColorRect2/Button" to="multiplayer" method="_on_Button_button_up"]
 [connection signal="button_up" from="multiplayer/ColorRect2/Button2" to="multiplayer" method="_on_Button2_button_up"]
+[connection signal="button_up" from="multiplayer/ColorRect2/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="pressed" from="multiplayer/PopupDialog/ToolButton" to="multiplayer/PopupDialog" method="_on_ToolButton_pressed"]
+[connection signal="pressed" from="multiplayer/PopupDialog2/ToolButton" to="multiplayer/PopupDialog2" method="_on_ToolButton_pressed"]
+[connection signal="pressed" from="multiplayer/PopupDialog3/ToolButton" to="multiplayer/PopupDialog3" method="_on_ToolButton_pressed"]

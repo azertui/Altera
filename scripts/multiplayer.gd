@@ -26,13 +26,25 @@ func refresh_list()->void:
 	server_tree.clear()
 
 func _on_Button_button_up() -> void:
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://menu.tscn")
 
 
 func _on_Button2_button_up() -> void:
-	var selected= server_tree.get_selected_items()[0]
-	print(servers[selected])
-
+	var selected= server_tree.get_selected_items()
+	if selected.empty():
+		get_node("PopupDialog2").popup()
+		print("test1")
+	else:
+		print("test2")
+		get_parent().connect_to(servers[selected[0]])
+	
+func connection_fail() -> void:
+	get_node("PopupDialog").popup()
+	refresh_list()
+	
+func host_fail()->void:
+	get_node("PopupDialog3").popup()
 
 func _on_refresh_button_up() -> void:
 	refresh_list()
