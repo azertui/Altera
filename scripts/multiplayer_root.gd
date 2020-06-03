@@ -16,7 +16,7 @@ extends Node
 
 const PORT_CLIENT=6744
 const PORT_HUB=6745
-const HUB_IP="127.0.0.1"
+const HUB_IP="35.188.217.219"
 var socketUDP = PacketPeerUDP.new()
 var gameLoad = preload("res://game.tscn")
 var game = null
