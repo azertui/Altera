@@ -204,6 +204,7 @@ func _on_Timer_timeout() -> void:
 		hosting = true
 		self.add_child(game)
 		remove_menu()
+		OS.set_window_resizable(true)
 	else:
 		if game!=null:
 			game.queue_free()
