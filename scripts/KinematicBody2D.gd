@@ -121,6 +121,7 @@ func change_animation(anim:String)->void:
 	animation.play(anim)
 
 func _on_Bridges_body_entered(body: Node) -> void:
+	print("collision")
 	if body.get_instance_id()==get_instance_id():
 		set_collision_layer_bit(0,false)
 		set_collision_mask_bit(0,false)

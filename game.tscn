@@ -100,3 +100,5 @@ shape = SubResource( 7 )
 __meta__ = {
 "_editor_description_": ""
 }
+[connection signal="body_entered" from="Bridges" to="Terrain/Transparent/Objects/Marstine" method="_on_Bridges_body_entered"]
+[connection signal="body_exited" from="Bridges" to="Terrain/Transparent/Objects/Marstine" method="_on_Bridges_body_exited"]
