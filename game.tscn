@@ -4,25 +4,25 @@
 [ext_resource path="res://assets/tilesets.tres" type="TileSet" id=2]
 [ext_resource path="res://scripts/Scene.gd" type="Script" id=4]
 
-[sub_resource type="RectangleShape2D" id=115]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.0648, 5.87836 )
 
-[sub_resource type="RectangleShape2D" id=116]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 22.6703, 6.9613 )
 
-[sub_resource type="RectangleShape2D" id=117]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 37.3302, 6.9472 )
 
-[sub_resource type="RectangleShape2D" id=118]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 14.7429, 6.97687 )
 
-[sub_resource type="RectangleShape2D" id=119]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 14.3133, 6.56593 )
 
-[sub_resource type="RectangleShape2D" id=120]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 29.4644, 6.60806 )
 
-[sub_resource type="RectangleShape2D" id=121]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 21.5282, 5.81595 )
 
 [node name="Scene" type="Node2D"]
@@ -69,34 +69,34 @@ collision_mask = 4
 
 [node name="Horizontal" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 423.591, 280.289 )
-shape = SubResource( 115 )
+shape = SubResource( 1 )
 
 [node name="vertical3" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 360.012, 143.704 )
 rotation = 1.57079
-shape = SubResource( 116 )
+shape = SubResource( 2 )
 
 [node name="Vertical4" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 552.015, 175.471 )
 rotation = 1.57079
-shape = SubResource( 117 )
+shape = SubResource( 3 )
 
 [node name="Vertical5" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 519.97, 230.846 )
 rotation = 1.57079
-shape = SubResource( 118 )
+shape = SubResource( 4 )
 
 [node name="Horizontal2" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 504.494, 39.9713 )
-shape = SubResource( 119 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 584.714, 327.721 )
-shape = SubResource( 120 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Bridges"]
 position = Vector2( 688.242, 344.058 )
-shape = SubResource( 121 )
+shape = SubResource( 7 )
 __meta__ = {
 "_editor_description_": ""
 }

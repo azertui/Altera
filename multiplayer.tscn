@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/multiplayer.gd" type="Script" id=1]
 [ext_resource path="res://scripts/multiplayer_root.gd" type="Script" id=2]
 [ext_resource path="res://scripts/PopupConnectionError.gd" type="Script" id=3]
+[ext_resource path="res://assets/Marstine.tres" type="SpriteFrames" id=4]
 
 [node name="root" type="Node"]
 script = ExtResource( 2 )
@@ -25,19 +26,23 @@ __meta__ = {
 }
 
 [node name="ItemList" type="ItemList" parent="multiplayer/ColorRect"]
-margin_right = 1024.0
-margin_bottom = 512.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="refresh" type="Button" parent="multiplayer/ColorRect"]
-margin_left = 928.0
-margin_top = 488.0
-margin_right = 1024.0
-margin_bottom = 508.0
+anchor_left = 0.90625
+anchor_top = 0.953125
+anchor_right = 1.0
+anchor_bottom = 0.992188
 text = "REFRESH LIST"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="ColorRect2" type="ColorRect" parent="multiplayer"]
 anchor_top = 1.0
@@ -50,25 +55,36 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="multiplayer/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 48.0
 margin_top = 24.0
-margin_right = 216.0
-margin_bottom = 64.0
+margin_right = -808.0
+margin_bottom = -24.0
 text = "RETURN TO MENU"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Button2" type="Button" parent="multiplayer/ColorRect2"]
-margin_left = 428.0
-margin_top = 24.0
-margin_right = 596.0
-margin_bottom = 64.0
+anchor_left = 0.417969
+anchor_top = 0.272727
+anchor_right = 0.582031
+anchor_bottom = 0.727273
 text = "JOIN SERVER"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Button3" type="Button" parent="multiplayer/ColorRect2"]
-margin_left = 808.0
-margin_top = 24.0
-margin_right = 976.0
-margin_bottom = 64.0
+anchor_left = 0.789063
+anchor_top = 0.272727
+anchor_right = 0.953125
+anchor_bottom = 0.727273
 text = "HOST SERVER"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="PopupDialog" type="PopupDialog" parent="multiplayer"]
 anchor_left = 0.5
@@ -175,6 +191,74 @@ margin_top = 36.0
 margin_right = 96.0
 margin_bottom = 58.0
 text = "close"
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = -36.0
+margin_right = 80.0
+margin_bottom = 36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -28.0
+margin_right = 74.0
+margin_bottom = -14.0
+text = "getting server approval"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Control"]
+position = Vector2( 512, 304 )
+frames = ExtResource( 4 )
+animation = "walk_down"
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -44.0
+margin_right = 64.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="PopupDialog"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 112.0
+margin_bottom = 48.0
+text = "name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 [connection signal="button_up" from="multiplayer/ColorRect/refresh" to="multiplayer" method="_on_refresh_button_up"]
 [connection signal="button_up" from="multiplayer/ColorRect2/Button" to="multiplayer" method="_on_Button_button_up"]
 [connection signal="button_up" from="multiplayer/ColorRect2/Button2" to="multiplayer" method="_on_Button2_button_up"]
@@ -182,3 +266,5 @@ text = "close"
 [connection signal="pressed" from="multiplayer/PopupDialog/ToolButton" to="multiplayer/PopupDialog" method="_on_ToolButton_pressed"]
 [connection signal="pressed" from="multiplayer/PopupDialog2/ToolButton" to="multiplayer/PopupDialog2" method="_on_ToolButton_pressed"]
 [connection signal="pressed" from="multiplayer/PopupDialog3/ToolButton" to="multiplayer/PopupDialog3" method="_on_ToolButton_pressed"]
+[connection signal="text_entered" from="PopupDialog/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
