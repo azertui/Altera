@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Marstine.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scripts/KinematicBody2D.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.47827, 1.27203 )
+
+[node name="Marstine" type="KinematicBody2D" groups=[
+"player",
+]]
+position = Vector2( 536.084, 294.214 )
+collision_layer = 15
+collision_mask = 15
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.00872767, 11.2537 )
+scale = Vector2( 1, 0.5 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.4, 0.4 )
+frames = ExtResource( 1 )
+animation = "walk_down"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1.49017, 3.89532 )
+current = true
+zoom = Vector2( 0.3, 0.3 )

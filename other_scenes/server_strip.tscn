@@ -1,0 +1,43 @@
+[gd_scene format=2]
+
+[node name="server" type="Control"]
+anchor_right = 1.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 64.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 72.0
+margin_bottom = 38.0
+text = "Server Name"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 776.0
+margin_top = 24.0
+margin_right = 902.0
+margin_bottom = 38.0
+text = "Number of players :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 904.0
+margin_top = 24.0
+margin_right = 960.0
+margin_bottom = 38.0
+text = "0/20"
+__meta__ = {
+"_edit_use_anchors_": false
+}

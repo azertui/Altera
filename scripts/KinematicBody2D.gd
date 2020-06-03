@@ -1,9 +1,6 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
+var dummy = false
 var arrow = preload("res://objects/arrow.tscn")
 onready var animation = get_node("AnimatedSprite")
 var speed = 20
@@ -16,6 +13,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
+	if dummy:
+		pass
 	var direction = Vector2.ZERO
 	var left = Input.is_action_pressed("ui_left")
 	var right = Input.is_action_pressed("ui_right")
@@ -118,7 +117,8 @@ func _process(delta: float):
 # warning-ignore:return_value_discarded
 	move_and_collide(direction)
 	
-
+func change_animation(anim:String)->void:
+	animation.play(anim)
 
 func _on_Bridges_body_entered(body: Node) -> void:
 	if body.get_instance_id()==get_instance_id():
